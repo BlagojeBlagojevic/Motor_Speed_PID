@@ -1,4 +1,4 @@
-# -Motor-speed-control
+# Motor-speed-control
  This repository consists of the following units:
 
 1. MyProject.c

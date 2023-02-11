@@ -27,9 +27,3 @@ The setup() function initializes the serial communication and calls the setupCon
 
 The loop() function continuously checks for incoming serial data, and if there is data, it reads it and stores it in the variable speedM. If there is no incoming data, it sends the value of input_parameter1 to the serial port.
 
-![proeject](https://user-images.githubusercontent.com/100707842/207294738-998cf032-65bd-41b7-bcb4-0f0531e99687.jpg)
-
-
-
-![Screenshot_4](https://user-images.githubusercontent.com/100707842/207296521-e5ee6d16-a4a0-4737-bc9b-dc1a17286af7.jpg)
-

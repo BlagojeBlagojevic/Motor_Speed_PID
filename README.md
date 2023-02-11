@@ -16,6 +16,15 @@ The user of this repository must take care of the pid controller settings within
 
 Also, the code must be changed depending on the type of  encoder.
 
+3. Webserver.ino
+The code starts by including the necessary libraries for either the ESP32 or ESP8266 platform, then creates an instance of the AsyncWebServer class on port 80.
+
+The setupConection() function sets up the connection to the local WiFi network, sets up the server to handle HTTP GET requests on the root URL "/" and on the "/get" URL, and sets the notFound() function as the handler for when a URL is not found.
+
+The setup() function initializes the serial communication and calls the setupConection() function.
+
+The loop() function continuously checks for incoming serial data, and if there is data, it reads it and stores it in the variable speedM. If there is no incoming data, it sends the value of input_parameter1 to the serial port.
+
 ![proeject](https://user-images.githubusercontent.com/100707842/207294738-998cf032-65bd-41b7-bcb4-0f0531e99687.jpg)
 
 

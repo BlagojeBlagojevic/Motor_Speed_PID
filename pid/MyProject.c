@@ -87,5 +87,6 @@ void main()
   init();
  while(1)
  {
+  UART1_Read_Text(brzina);
  }
  }

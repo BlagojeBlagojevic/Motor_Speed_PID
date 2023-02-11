@@ -16,7 +16,9 @@ The user of this repository must take care of the pid controller settings within
 
 Also, the code must be changed depending on the type of  encoder.
 
-3. Webserver.ino
+3. Webserver.ino  
+
+
 The code starts by including the necessary libraries for either the ESP32 or ESP8266 platform, then creates an instance of the AsyncWebServer class on port 80.
 
 The setupConection() function sets up the connection to the local WiFi network, sets up the server to handle HTTP GET requests on the root URL "/" and on the "/get" URL, and sets the notFound() function as the handler for when a URL is not found.

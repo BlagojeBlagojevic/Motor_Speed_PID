@@ -10,8 +10,8 @@ sbit LCD_D4_Direction at TRISD0_bit;
 sbit LCD_D5_Direction at TRISD1_bit;
 sbit LCD_D6_Direction at TRISD2_bit;
 sbit LCD_D7_Direction at TRISD3_bit;
-float kp = 0;
-float ki = 0;
+float kp = 45;
+float ki = 108;
 float kd = 0;
 int count = 0;
 float v1 = 0.0,v_des = 100.0, err, err_bef = 0.0f, err_der = 0, der = 0, pom;      //V_ZELJENEO MAX=360 RPM TU SE POSAVLJA BRZINA
@@ -51,7 +51,7 @@ void interrupt()
    speed_text[2]=(int)v1%10+48;
    Lcd_Out(1,1,"BRZINA: ");
    Lcd_Out(2,1,speed_text);
-   UART1_Write_Text();
+   //UART1_Write_Text();
    UART1_Write_Text(speed_text);
    count = 0;
    err = v_des - v1;
@@ -78,7 +78,7 @@ void interrupt()
    INTF_bit=0;
   }
 }
-#define TUNE 1
+#define TUNE 0
 //In real dc motors this freq is 5-20khz
 //if simulation in proteus freq is 500hz cuz of simulation
 //min freq for motor coude be calculated if we lock motor as a low pass filter

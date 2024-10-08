@@ -58,8 +58,8 @@ Feedback control and non-feedback control are the two main control approaches in
 #### 2.4.1 Control without feedback
 
 In non-feedback control, also known as open-loop control, the output of the system is not measured or used to adjust the input signals. In this case, the controller does not receive feedback on the current state of the system, but manages the process based on predefined instructions or models.
+![Open-loop-feedback-system](https://github.com/user-attachments/assets/f3af5a7b-9668-4f3d-ad38-bdaf1612ef48)
 
-![Open-loop-feedback-system](https://github.com/user-attachments/assets/bc35853e-f066-4217-887f-fda838df1c20)
 
 `Figure 1. An example of an open loop process and its controller`
 
@@ -85,7 +85,7 @@ In non-feedback control, also known as open-loop control, the output of the syst
 
 In **feedback control**, also known as **closed-loop control**, the output of the system is continuously measured and used as feedback to adjust the input signal. The controller compares the current output value with the desired (reference) value and adjusts the input to minimize the error between these two values.
 
-![Screenshot_2](https://github.com/user-attachments/assets/2de4cf42-36d4-4f54-9ff4-2857c6be01e6)
+![Screenshot_2](https://github.com/user-attachments/assets/3769c522-bae2-4db0-a5fa-cf0e7511a618)
 
 `Figure 2. An example of a closed loop process and its controller`
 
@@ -172,8 +172,9 @@ Where are:
 
 **Integrative part (I)**: Larger $K_i$ can eliminate static error, but too large $K_i$ can cause too long response time or instability.
 
- ![ki](https://github.com/user-attachments/assets/3fbd9762-ef43-42b2-862c-95fb8e6d365e)
+![ki](https://github.com/user-attachments/assets/c87190ef-ba12-422c-85e3-91925d262f8e)
 
+ 
 `Figure 5. An example of the response of the system is the dependence on the gain Kp Ki Kd`
 
 
@@ -181,7 +182,7 @@ Where are:
 
 **Derivative part (D)**: The derivative part calms the system and prevents oscillations, but too large $K_d$ can cause hypersensitivity to noise in the signal.
 
- ![kd](https://github.com/user-attachments/assets/5161cbe2-414a-438b-8841-3f03f6aca365)
+![kd](https://github.com/user-attachments/assets/6dc2a67f-7b20-41b8-b15d-9effb684f66d)
 
 `Figure 6. An example of the response of the system is the dependence on the gain Kp Ki Kd`
 
@@ -292,8 +293,8 @@ A DC motor (direct current motor) is an electromechanical device that converts e
 3. **Collector (commutator)**: A mechanical device that changes the direction of the current through the rotor so that continuous rotation is ensured.
 4. **Brushes**: Conductors that transmit electric current to the rotating part of the motor via the collector.
 
+![dc-motor](https://github.com/user-attachments/assets/3e2def32-e7ec-465b-9bd9-31822f87ba2a)
 
-![dc-motor](https://github.com/user-attachments/assets/6633510b-d77f-45d2-a07b-0492a294350d)
 
 `Figure 7 DC Motor`
 
@@ -318,8 +319,8 @@ When current is passed through the rotor windings, in the presence of the stator
 
 To obtain the transfer function of a DC motor, we must analyze the mechanical and electrical properties of the motor. The transfer function represents the relationship between the output (eg rotor angular velocity) and the input (eg supply voltage). Let's take a simple model of a DC motor, where the following notations are used:
 
+![dc_model](https://github.com/user-attachments/assets/313eb742-4b01-4c64-82f9-d1f5beda094c)
 
-![dc_model](https://github.com/user-attachments/assets/46b4239d-61d1-46fd-aec4-e335e5008e0a)
 
 - $e_a$: Motor voltage (input)
 - $I_a$: Motor current (input)
@@ -560,8 +561,8 @@ The first step in the Ziegler-Nichols method is to find the critical proportiona
 2. **Compile the code with `TUNE == 1` to be able to tune $K_p$
 
 3. **Increase $K_p$ gradually** until the system starts to oscillate with a constant amplitude. This is the critical value of $K_u$. In our case, we obtained stable oscillations for $K_p$ = 100.
-![Screenshot_4](https://github.com/user-attachments/assets/57cda3da-efc6-44da-9e48-8347a108725c)
 
+![Screenshot_4](https://github.com/user-attachments/assets/1c825166-8aa3-40fc-b44c-40849fec978a)
 
 
 5. After the oscillation is achieved, **record the oscillation period $T_u$**, that is, the duration of one complete cycle of oscillations. That time is 0.5s.

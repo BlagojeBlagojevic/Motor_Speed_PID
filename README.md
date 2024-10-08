@@ -112,8 +112,8 @@ The most common type of closed loop control is the `PID` controller.
 
 
 ## 3. Closed-loop controllers (PID)
+![pid](https://github.com/user-attachments/assets/4fe664fe-93cc-4adf-8bba-838c9f7320e5)
 
-![pid](https://github.com/user-attachments/assets/fa66188c-8cee-4b8a-9f76-66232099308b)
 
 `Figure 3. Example of a PID controller`
 
@@ -164,7 +164,8 @@ Where are:
 
 **Proportional part (P)**: Larger $K_p$ leads to faster response, but too large $K_p$ can cause oscillations.
 
- ![PID_varyingP](https://github.com/user-attachments/assets/5cca48b3-6d4c-4220-ab82-b3c70f7c90c0)
+![PID_varyingP](https://github.com/user-attachments/assets/41c44e42-a19d-4b74-abd9-8161a3a8ce4b)
+
 
 `Figure 4. An example of the system's response depending on the proportional gain`
 
